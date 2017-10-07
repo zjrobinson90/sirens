@@ -20,7 +20,7 @@ public class TriggerScript : MonoBehaviour {
         rend.sharedMaterial = material[1];
         for (int i = 0; i < 5; i++)
         {
-            Instantiate(prefab, new Vector3((i*2F) - 2, 1, -6), Quaternion.identity);
+            Instantiate(prefab, new Vector3((i*2F) - 5, 1.2F, -7), Quaternion.identity);
         }
     }
 
