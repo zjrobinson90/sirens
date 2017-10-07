@@ -18,6 +18,10 @@ public class TriggerScript : MonoBehaviour {
     void OnTriggerEnter (Collider other)
     {
         rend.sharedMaterial = material[1];
+        for (int i = 0; i < 5; i++)
+        {
+            Instantiate(prefab, new Vector3((i*2F) - 2, 1, -6), Quaternion.identity);
+        }
     }
 
     void OnTriggerStay (Collider other)
@@ -26,10 +30,6 @@ public class TriggerScript : MonoBehaviour {
     void OnTriggerExit (Collider other)
     {
         rend.sharedMaterial = material[0];
-        for (int i = 0; i < 50; i++)
-        {
-            Instantiate(prefab, new Vector3(0, i * 0.5F, 0), Quaternion.identity);
-        }
     }
 
 }
