@@ -5,15 +5,11 @@ using UnityEngine;
 public class Multiplier : MonoBehaviour {
 
     public Transform prefab;
-	void Start () {
-        for (int i = 0; i < 50; i++)
+    public void hotDogs()
+    {
+        for (int i = 0; i < 10; i++)
         {
-            Instantiate(prefab, new Vector3(0, i * 0.5F, 0), Quaternion.identity);
+            Instantiate(prefab, transform.position, transform.rotation);
         }
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }
