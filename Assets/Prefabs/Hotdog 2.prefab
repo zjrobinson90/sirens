@@ -60,6 +60,7 @@ GameObject:
   - component: {fileID: 114459012615501136}
   - component: {fileID: 114387003958178420}
   - component: {fileID: 114347877539839020}
+  - component: {fileID: 65785196148217606}
   m_Layer: 0
   m_Name: Hotdog 2
   m_TagString: Untagged
@@ -201,6 +202,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &65785196148217606
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1654284046740658}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 0.05, z: 1}
+  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!114 &114347877539839020
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -295,7 +308,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 1
   unhighlightOnDisable: 1
-  thickness: 0.5
+  thickness: 0
   customOutlineModels: []
   customOutlineModelPaths: []
   enableSubmeshHighlight: 0

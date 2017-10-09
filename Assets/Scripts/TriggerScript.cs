@@ -17,15 +17,16 @@ public class TriggerScript : MonoBehaviour {
 
     void OnTriggerEnter (Collider other)
     {
-        rend.sharedMaterial = material[1];
         for (int i = 0; i < 5; i++)
         {
-            Instantiate(prefab, new Vector3((i*2F) - 5, 1.2F, -7), Quaternion.identity);
+            //Instantiate(prefab, new Vector3((i*2F) - 5, 1.2F, -7), Quaternion.identity);
+            Instantiate(prefab, transform.position, transform.rotation);
         }
     }
 
     void OnTriggerStay (Collider other)
     {
+        rend.sharedMaterial = material[1];
     }
     void OnTriggerExit (Collider other)
     {
