@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class TriggerScript : MonoBehaviour {
 
-    public Transform prefab;
+    public float hotdogNum;
+	public Transform prefab;
     public Material[] material;
     Renderer rend;
 
@@ -21,6 +22,10 @@ public class TriggerScript : MonoBehaviour {
         {
             //Instantiate(prefab, new Vector3((i*2F) - 5, 1.2F, -7), Quaternion.identity);
             Instantiate(prefab, transform.position, transform.rotation);
+			GameObject dinger = GameObject.Find("Dinger");
+			TriggerScript triggerScript = dinger.GetComponent<TriggerScript>();
+			triggerScript.hotdogNum++;
+			//hotdogNum++;
         }
     }
 

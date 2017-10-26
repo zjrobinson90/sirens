@@ -9,6 +9,9 @@ public class Multiplier : MonoBehaviour {
     {
         for (int i = 0; i < 10; i++)
         {
+			GameObject dinger = GameObject.Find("Dinger");
+			TriggerScript triggerScript = dinger.GetComponent<TriggerScript>();
+			triggerScript.hotdogNum++;
             Instantiate(prefab, transform.position, transform.rotation);
         }
     }
